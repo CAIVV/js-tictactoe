@@ -19,7 +19,7 @@ function nextMove(square) {
     } else if(square.innerText == '') {
         square.innerText = document.turn;
         switchTurn();
-    } else if(CheckForDraw()) {
+    } else if(checkForDraw()) {
         setMessage("It's a draw! Start over!");
     } else {
         setMessage("Pick another square!");
@@ -30,7 +30,7 @@ function switchTurn() {
     if(checkForWinner(document.turn)) {
         setMessage("Congrats " + document.turn + " is a winner!");
         document.winner = document.turn;
-    } else if(CheckForDraw()) {
+    } else if(checkForDraw()) {
         setMessage("It's a draw!");
     } else if(document.turn == "X") {
         document.turn = "O";
