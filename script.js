@@ -20,7 +20,7 @@ function nextMove(square) {
         square.innerText = document.turn;
         switchTurn();
     } else if(CheckForDraw()) {
-        setMessage("It's a draw!");
+        setMessage("It's a draw! Start over!");
     } else {
         setMessage("Pick another square!");
     }
@@ -72,7 +72,7 @@ function clearBox(number) {
     document.getElementById("s" + number).innerText = "";
 }
 
-function CheckForDraw() {
+function checkForDraw() {
     for (var i = 1; i < 10; i++) {
         if(getBox(i) == "")
         return false;
