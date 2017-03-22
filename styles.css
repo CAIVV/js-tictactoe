@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two');
+
+body {
+    margin: auto;
+    width: 550px;
+    background: #EAF2EF;
+}
+
+h1 {
+    border-bottom: 1px solid black;
+    font-family: 'Amatic SC', cursive;
+}
+
+.Square {
+    height: 80px;
+    width: 80px;
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Shadows Into Light Two', cursive;
+}
+
+#message {
+    font-size: 25px;
+    font-family: 'Amatic SC', cursive;
+}
+
+#restart {
+    font-size: 25px;
+    font-family: 'Amatic SC', cursive;
+    text-decoration: none;
+    color: saddlebrown;
+}
