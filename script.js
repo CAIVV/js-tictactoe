@@ -19,6 +19,8 @@ function nextMove(square) {
     } else if(square.innerText == '') {
         square.innerText = document.turn;
         switchTurn();
+    } else if(CheckForDraw()) {
+        setMessage("It's a draw!");
     } else {
         setMessage("Pick another square!");
     }
@@ -28,6 +30,8 @@ function switchTurn() {
     if(checkForWinner(document.turn)) {
         setMessage("Congrats " + document.turn + " is a winner!");
         document.winner = document.turn;
+    } else if(CheckForDraw()) {
+        setMessage("It's a draw!");
     } else if(document.turn == "X") {
         document.turn = "O";
         setMessage(document.turn + "'s turn now!");
@@ -66,4 +70,12 @@ function getBox(number) {
 
 function clearBox(number) {
     document.getElementById("s" + number).innerText = "";
+}
+
+function CheckForDraw() {
+    for (var i = 1; i < 10; i++) {
+        if(getBox(i) == "")
+        return false;
+    } 
+    return true;
 }
